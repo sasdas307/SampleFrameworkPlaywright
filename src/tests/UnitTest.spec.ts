@@ -7,7 +7,7 @@ import LoginPage from "../pages/LoginPage";
     {username: "performance_glitch_user",password:"secret_sauce"},
   
 ].forEach(({username,password})=>{
-    test(`Parameterize Tests using ${username}`,{tag:['@UnitTest']}, async({page})=>{
+    test.only(`Parameterize Tests using ${username}`,{tag:['@UnitTest']}, async({page})=>{
         let loginPage:LoginPage;
         loginPage = new LoginPage(page);
         await page.goto("/");
@@ -16,5 +16,11 @@ import LoginPage from "../pages/LoginPage";
         await loginPage.clickLoginButon();
         console.log("DEBUG")
     })
+})
+
+test('Sample env Test', async({page})=>{
+    console.log(process.env.NODE_ENV);
+    console.log(process.env.userid);
+    console.log(process.env.password);
 })
 
