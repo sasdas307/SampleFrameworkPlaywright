@@ -1,0 +1,22 @@
+{
+    "LoginPage": {
+        "username": "#user-name",
+        "password": "#password",
+        "loginBtn": "#login-button"
+    },
+    "ProductsPage": {
+        "productTitle": ".title",
+        "productNames": "div.inventory_item_name ",
+        "selectProductLowToHigh": ".product_sort_container",
+        "productPrice": ".inventory_item_price",
+        "cartLink" : ".shopping_cart_link"
+    },
+    "CartPage": {
+        "cartTitle": ".title",
+        "itemName": ".inventory_item_name ",
+        "cartBadge": ".shopping_cart_badge",
+        "cartItems": ".cart_item",
+        "cartProductName": ".inventory_item_name",
+        "cartProductQty": ".cart_quantity"    
+    }
+}
