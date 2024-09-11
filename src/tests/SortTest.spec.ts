@@ -4,6 +4,7 @@ import LoginPage from "../pages/LoginPage";
 import ProductsPage from "../pages/ProductsPage";
 import * as selectors from "../data/selectors.json";
 import * as utility from "../utils/utilityMethods";
+import logger from '../utils/LoggerUtils';
 
 test.describe('Sorting Feature',async()=>{
     let loginPage:LoginPage;
@@ -11,7 +12,7 @@ test.describe('Sorting Feature',async()=>{
 
     test.beforeEach(async ({page,baseURL})=>{
         loginPage = new LoginPage(page);
-        await page.goto("https://www.saucedemo.com/");
+        await page.goto("/");
         await loginPage.enterUserName(users.standard.username)
         await loginPage.enterPassword(users.standard.password)
         await loginPage.clickLoginButon();

@@ -5,15 +5,16 @@ import ProductsPage from "../pages/ProductsPage";
 import * as selectors from "../data/selectors.json";
 import * as utility from "../utils/utilityMethods";
 import CartPage from "../pages/CartPage";
+import logger from '../utils/LoggerUtils';
 
 test.describe('Sorting Feature', async () => {
     let loginPage: LoginPage;
     let productsPage: ProductsPage;
     let cartPage: CartPage;
 
-    /* test.beforeEach(async ({ page, baseURL }) => {
+    test.beforeEach(async ({ page, baseURL }) => {
         loginPage = new LoginPage(page);
-        await page.goto("https://www.saucedemo.com/");
+        await page.goto("/");
         await loginPage.enterUserName(users.standard.username)
         await loginPage.enterPassword(users.standard.password)
         await loginPage.clickLoginButon();
@@ -21,7 +22,7 @@ test.describe('Sorting Feature', async () => {
 
         productsPage = new ProductsPage(page);
         expect(await productsPage.getTitle).toBe("Products");
-    }) */
+    }) 
 
     test('Positive: Standard user tries to add 1 product to the cart.',
         { tag: ['@AddItemToCart'] }, async ({ page }) => {

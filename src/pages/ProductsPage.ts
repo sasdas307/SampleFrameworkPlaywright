@@ -1,13 +1,14 @@
 import { Page,expect } from "@playwright/test";
 import * as selectors from "../data/selectors.json";
-
+import logger from '../utils/LoggerUtils';
 export default class ProductsPage {
     constructor(public page: Page) {
     }
 
     async getProductTitle(){
-        await this.page.waitForSelector(selectors.ProductsPage.productTitle,{state:'attached'})
-        await expect(this.page.locator(selectors.ProductsPage.productTitle)).toContainText("Products");
+        await this.page.waitForSelector(selectors.ProductsPage.productTitle,{state:'attached'});
+        return await this.page.locator(selectors.ProductsPage.productTitle).textContent()
+        // await expect(this.page.locator(selectors.ProductsPage.productTitle)).toContainText("Products");
        
     }
     get getTitle(){
