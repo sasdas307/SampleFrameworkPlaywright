@@ -22,7 +22,7 @@ const config: PlaywrightTestConfig = {
     fullyParallel: true,
     use: {
         baseURL: "https://www.saucedemo.com",
-        headless: false,
+        headless: true,
         screenshot: "on",
         video: "on",
         launchOptions: {
