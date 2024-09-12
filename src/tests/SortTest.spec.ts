@@ -30,7 +30,7 @@ test.describe('Sorting Feature',async()=>{
         expect(actProductNames,'Product Names are not displayed in sorted order').toEqual(expSortedProductNames);
     })
 
-    test.only('Positive: User can sort the products by price (low to high)',
+    test('Positive: User can sort the products by price (low to high)',
         {tag:['@SortByPriceAsc']},async({page})=>{
             await productsPage.selectByValue();
             await productsPage.getProductPrice();

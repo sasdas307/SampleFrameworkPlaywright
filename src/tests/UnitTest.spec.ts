@@ -43,7 +43,7 @@ test('Attach Screenshot for each step', async({page},testInfo)=>{
         })
 })
 
-test.only('Practice Test ', async({page},testInfo)=>{
+test('Practice Test ', async({page},testInfo)=>{
     await page.goto("https://www.amazon.in/");
     /* await page.locator("#searchDropdownBox").selectOption("search-alias=baby");
     await page.locator("#twotabsearchtextbox").fill("Baby Products");
